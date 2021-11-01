@@ -24,7 +24,7 @@ export const GetCat = async () => {
   
     const { data } = await axios({
       method: 'get',
-      url: 'http://host.docker.internal:3000/cats',
+      url: 'http://host.docker.internal:3300/cats',
     })
     console.log(data)
   
@@ -37,7 +37,7 @@ export const CreateCatBody = async (body:any) => {
   console.log(body.name)
   const { data } = await axios({
     method: 'post',
-    url: 'http://host.docker.internal:3000/cats',
+    url: 'http://host.docker.internal:3300/cats',
     data: {
       id: uuid,
       name:body.name,
